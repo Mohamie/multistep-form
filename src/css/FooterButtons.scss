@@ -10,12 +10,13 @@
 
     .btn{
         border: unset;
-        padding: 1rem;
+
         
         &.--previous{
             font-weight: 700;
             color: var(--text-primary-color);
             background: unset;
+            padding: 0;
         }
 
         &.--next{

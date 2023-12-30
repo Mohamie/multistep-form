@@ -1,0 +1,43 @@
+.form__addons{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .--addon{
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+        border: .1rem solid var(--text-primary-color);
+        border-radius: .5rem;
+
+        &:has(input:checked){
+            background-color: var(--very-light-gray);
+            border: .1rem solid var(--selected-plan);
+        }
+
+        input{
+            appearance: auto;
+        }
+
+        label{
+            display: flex;
+            flex-direction: column;
+            margin-left: 1rem;
+            width: 80%;
+            color: var(--text-heading-color);
+            font-weight: 700;
+
+            span{
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: var(--text-primary-color);
+            }
+        } 
+        
+        .pricing{
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--selected-plan);
+        }
+    }
+}
