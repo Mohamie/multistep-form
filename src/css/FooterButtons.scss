@@ -1,0 +1,28 @@
+.footer__buttons{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--white-color);
+
+    .btn{
+        border: unset;
+        padding: 1rem;
+        
+        &.--previous{
+            font-weight: 700;
+            color: var(--text-primary-color);
+            background: unset;
+        }
+
+        &.--next{
+            padding: 1rem 1.5rem;
+            color: var(--white-color);
+            border-radius: .3rem;
+            background-color: var(--text-heading-color);
+        }
+    }
+}

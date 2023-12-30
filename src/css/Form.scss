@@ -1,0 +1,11 @@
+.form_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 35rem;
+    padding: 1.5rem;
+    margin-top: 5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}

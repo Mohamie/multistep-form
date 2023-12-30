@@ -1,0 +1,28 @@
+.form__personal-info{
+    
+    .--text-input{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+
+        label{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--text-heading-color);
+        }
+
+
+        input{
+            font-size: var(--small-text-size);
+            font-weight: 700;
+            color: var(--text-heading-color);
+            padding: 1rem 1.5rem;
+            border-radius: .5rem;
+            border: .1rem solid var(--text-primary-color);
+
+            &::placeholder{
+                color: var(--text-primary-color);
+            }
+        }
+    }
+}

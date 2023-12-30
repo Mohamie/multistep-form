@@ -1,0 +1,23 @@
+.form__steps{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .step{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        width: 3rem;
+        border: .1rem solid var(--step-color);
+        border-radius: 50%;
+        font-weight: 700;
+        color: var(--step-color);
+
+        &.--selected{
+            color: var(--text-heading-color);
+            background-color: var(--selected-step-color);
+            border: .1rem solid var(--selected-step-color);
+        }
+    }
+}
