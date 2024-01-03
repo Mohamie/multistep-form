@@ -4,7 +4,21 @@ type Form = {
     phoneNumber: string,
     plan: PlanOptions,
     planBillingFrequency: BillFrequency,
-    addOns: AddOns
+    addOns: Array<AddOnType>
+}
+
+type FormActionType = "NAME" | "EMAIL" | "PHONE" | "PLAN" | "BILL_FREQUENCY" | "ADDONS"
+
+type FormAction = {
+    type: FormActionType,
+    value: any
+}
+
+enum Step {
+    "STEP_ONE" = 1, 
+    "STEP_TWO" = 2,
+    "STEP_THREE" = 3,
+    "STEP_FOUR" = 4
 }
 
 
@@ -39,7 +53,13 @@ type AddonsFeed = {
     CUSTOM_PROFILE: OptionFeed
 }
 
+type Description = {
+    title: string,
+    subtitle: string,
+}
+
 type DataFeed = {
+    descriptions: Array<Description>,
     plan: {
         MONTHLY: PlanFeed,
         YEARLY: PlanFeed,
@@ -48,93 +68,5 @@ type DataFeed = {
         MONTHLY: AddonsFeed,
         YEARLY: AddonsFeed,
     }
-}
-
-const dataFeed: DataFeed = {
-    plan: {
-        MONTHLY: {
-            ARCADE: {
-                title: "",
-                subtitle: "",
-                price: 9,
-                priceText: "$9/mo"
-            },
-            ADVANCED: {
-                title: "",
-                subtitle: "",
-                price: 12,
-                priceText: "$12/mo"
-            },
-            PRO: {
-                title: "",
-                subtitle: "",
-                price: 15,
-                priceText: "$15/mo"
-            }
-        },
-        YEARLY: {
-            ARCADE: {
-                title: "",
-                subtitle: "",
-                price: 90,
-                priceText: "$90/yr"
-            },
-            ADVANCED: {
-                title: "",
-                subtitle: "",
-                price: 120,
-                priceText: "$120/yr"
-            },
-            PRO: {
-                title: "",
-                subtitle: "",
-                price: 150,
-                priceText: "$150/yr"
-            }
-        }
-    },
-    addOns: {
-        MONTHLY: {
-           ONLINE_SERVICE: {
-                title: "Online service",
-                subtitle: "Access to multiplayer games",
-                price: 1,
-                priceText: "+$1/mo",
-           }, 
-           LARGE_STORAGE: {
-                title: "Online service",
-                subtitle: "Access to multiplayer games",
-                price: 1,
-                priceText: "+$1/mo",
-           }, 
-           CUSTOM_PROFILE: {
-                title: "Online service",
-                subtitle: "Access to multiplayer games",
-                price: 1,
-                priceText: "+$1/mo",
-           }, 
-        },
-        YEARLY: {
-           ONLINE_SERVICE: {
-                title: "Online service",
-                subtitle: "Access to multiplayer games",
-                price: 1,
-                priceText: "+$1/mo",
-           }, 
-           LARGE_STORAGE: {
-                title: "Online service",
-                subtitle: "Access to multiplayer games",
-                price: 1,
-                priceText: "+$1/mo",
-           }, 
-           CUSTOM_PROFILE: {
-                title: "Online service",
-                subtitle: "Access to multiplayer games",
-                price: 1,
-                priceText: "+$1/mo",
-           }, 
-        }
-    }
-
 }
 

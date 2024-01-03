@@ -25,5 +25,13 @@
             border-radius: .3rem;
             background-color: var(--text-heading-color);
         }
+
+        &.--hidden{
+            opacity: 0;
+        }
+
+        &.--confirm{
+            background-color: var(--selected-plan);
+        }
     }
 }
