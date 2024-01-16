@@ -39,7 +39,21 @@ export default function Form(props: FormProps){
             />
         }
 
-        {activeStep === 3 && <AddOnInputs addOns={formData.addOns} updateAddonForm={setFormInfo}/>}
-        {activeStep === 4 &&<FormSummary/> }
+        {
+            activeStep === 3 && 
+            <AddOnInputs 
+                addOns={formData.addOns}
+                addOnFeed={formDataFeed.addOns[formData.planBillingFrequency]} 
+                updateAddonForm={setFormInfo}
+            />
+        }
+
+        {
+            activeStep === 4 && 
+            <FormSummary
+                form={formData}
+                dataFeed={formDataFeed}
+            /> 
+        }
     </div>
 }
